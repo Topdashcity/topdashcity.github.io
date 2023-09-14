@@ -1,0 +1,20 @@
+---
+const {
+  title = 'Lorem Ipsum',
+  content = 'Lorem ipsum dolor sit amet quiopisces.',
+  image = '/logo-dash-alt.png',
+  bgColor = 'bg-slate',
+  textColor = 'text-background'
+} = Astro.props
+
+const bannerClass = `pt-4 ${bgColor}`
+const titleClass = `text-4xl ${textColor}`
+const textClass = `my-6 ${textColor}`
+---
+<div class={bannerClass}>
+  <div class="container flex flex-col place-items-center w-full py-8 px-4">
+    <img class="w-64 mb-4" src={image} />
+    <h2 class={titleClass}>{ title }</h2>
+    <p class={textClass}>{ content }</p>
+  </div>
+</div>

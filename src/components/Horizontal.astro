@@ -1,0 +1,22 @@
+---
+const {
+  title = 'Lorem Ipsum',
+  content = 'Lorem ipsum dolor sit amet quiopisces.',
+  image = '/logo-dash-alt.png',
+  hasCTA = true,
+  action = '/',
+  actionName = 'Ver más',
+  hasContentRight = false,
+} = Astro.props
+---
+
+<div class="custom-container">
+  <div class:list={['half', {'order-last': hasContentRight}]}>
+    <h2>{title}</h2>
+    <p>{content}</p>
+    { hasCTA && (<a class="button" href={action}>{actionName}</a>) }
+  </div>
+  <div class="half">
+    <img src={image} />
+  </div>
+</div>

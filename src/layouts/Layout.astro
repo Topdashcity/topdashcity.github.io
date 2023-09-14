@@ -1,0 +1,54 @@
+---
+import '@fontsource-variable/montserrat'
+import Navbar from '@components/Navbar.astro'
+import Footer from '@components/Footer.astro'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Los mejores comercios de Venezuela que aceptan Dash al alcance de tu mano" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body>
+		<Navbar />
+		<slot />
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		font-family: 'Montserrat Variable', sans-serif;
+	}
+	h1 {
+  	@apply text-5xl
+	}
+	h2 {
+		@apply text-4xl py-4
+	}
+	p {
+		@apply my-6
+	}
+	input {
+		@apply my-4 p-4 text-black rounded-md focus:outline-none
+	}
+	.button {
+		@apply rounded-md w-32 bg-primary text-xs text-white p-4 rounded-md h-[3rem] text-xs uppercase font-bold tracking-widest disabled:bg-slate disabled:text-accent
+	}
+	.custom-container {
+		@apply container mx-auto flex justify-evenly place-items-center py-8
+	}
+	.custom-grid {
+		@apply grid gap-2 grid-cols-3 place-items-center
+	}
+	.half {
+		@apply w-1/2 p-4
+	}
+	.centered-header {
+		@apply text-4xl text-primary uppercase font-bold pt-8
+	}
+</style>

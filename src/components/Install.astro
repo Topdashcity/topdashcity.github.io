@@ -1,0 +1,62 @@
+---
+const links = {
+  installers: [
+    {
+      link: 'https://apps.apple.com/app/dash-wallet/id1206647026',
+      image: '/botones_05.png'
+    },
+    {
+      link: 'https://play.google.com/store/apps/details?id=hashengineering.darkcoin.wallet&referrer=utm_source%3Ddash-org%26utm_medium%3Ddownloads%26utm_campaign%3Dmobile',
+      image: '/botones_03.png'
+    }
+  ],
+  exchanges: [
+    {
+      link: 'https://www.binance.com/es-MX',
+      image: '/exchanges/botones_09.png'
+    },
+    {
+      link: 'https://coincoinx.com/',
+      image: '/exchanges/botones_16.png'
+    },
+    {
+      link: 'https://cryptobuyerlatam.com/en/',
+      image: '/exchanges/botones_06.png'
+    },
+    {
+      link: 'https://afx.trade/',
+      image: '/exchanges/botones_04.png'
+    }
+  ]
+}
+---
+
+<section class="custom-container">
+  <div class="half">
+    <h2 class="text-background">Tus primeros Cripto-pasos</h2>
+    <p class="font-bold tracking-widest">1. Descarga tu Dash Wallet.</p>
+    <div class="py-4 grid gap-8 grid-cols-2">
+      {
+        links.installers.map(installer => (
+          <a href={installer.link} rel="noopener noreferrer" target="_blank">
+            <img src={installer.image} />
+          </a>
+        ))
+      }
+    </div>
+    <p class="font-bold tracking-widest">2. Coloca tu clave de acceso y guarda tu frase de recuperación.</p>
+    <p class="font-bold tracking-widest">3. Compra tus Dash con Bolívares en:</p>
+    <div class="py-4 grid gap-8 grid-cols-2 grid-rows-2 place-items-center">
+      {
+        links.exchanges.map(exchange => (
+          <a href={exchange.link} rel="noopener noreferrer" target="_blank">
+            <img src={exchange.image} />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <div class="half flex justify-center">
+    <img src="/crypto-pasos.png" />
+  </div>
+</section>

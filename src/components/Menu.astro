@@ -1,0 +1,17 @@
+---
+const menuLinks = [
+  ['Directorio', '/directorio'],
+  ['Eventos', '/eventos'],
+  ['Nosotros', '/nosotros']
+]
+---
+
+<ul class="flex items-center p-4">
+  {
+    menuLinks.map(link => (
+      <li class="uppercase text-background font-bold hover:underline hover:decoration-2 tracking-wide text-sm mx-4">
+        <a href={link[1]}>{link[0]}</a>
+      </li>
+    ))
+  }
+</ul>

@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '@layouts/Layout.astro'
+import Card from '@components/Card.astro'
+import { cities } from '@utils'
+
+export async function getStaticPaths() {
+  for (const city of cities) {
+    const allCommerces = await getCollection(city)
+    const subsidiariesFromCommerce = await getCollection(city, ({ data }) => {
+      return data.subsidiaryFrom
+    })
+
+    return allCommerces.map((commerce) => {
+      const subsidiaries = subsidiariesFromCommerce.filter((subsidiary) => (
+        (commerce.data.subsidiaryFrom === subsidiary.data.subsidiaryFrom)
+        &&
+        (commerce.slug !== subsidiary.slug)
+      ))
+
+      return {
+        params: {
+          slug: commerce.slug
+        },
+        props: {
+          ...commerce.data,
+          subsidiaries
+        }
+      }
+    })
+  }
+}
+
+const {
+  name, 
+  tag,
+  address,
+  map,
+  subsidiaries
+} = Astro.props
+---
+
+<Layout>
+  <section class="custom-container">
+    <article class="half">
+      <h1>{ name }</h1>
+      <h2>Categoría: { tag }</h2>
+      <p>{ address }</p>
+      <a class="button" href='/directorio'>Directorio</a>
+    </article>
+    <article class="half">
+      <iframe src={ map } width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </article>
+  </section>
+  <section>
+    {
+      (subsidiaries.length > 0) && (
+        <h2 class="centered-header text-center">También puede que te interesen estas sucursales:</h2>
+        <div class="custom-container">
+          <div class="grid gap-4 grid-cols-4">
+          {
+            subsidiaries.map((subsidiary) => (
+              <Card 
+                tag={ subsidiary.data.tag } 
+                name={ subsidiary.data.name } 
+                address={ subsidiary.data.address },
+                cta={ `/directorio/valencia/${subsidiary.slug}` }
+              />
+            ))
+          }
+          </div>
+        </div>
+      )
+    }
+  </section>
+</Layout>

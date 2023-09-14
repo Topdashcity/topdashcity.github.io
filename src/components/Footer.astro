@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon'
+const year = new Date().getFullYear()
+---
+<div class="w-full bg-accent text-white py-8">
+  <div class="custom-container">
+    <div class="half">
+      <h2>¿Quieres ser parte de TOP Dash City?</h2>
+      <p>TOP Dash City es un proyecto de <a class="underline" href="https://www.dash.org/es/dcg/" rel="noopener noreferrer" target="_blank">Dash Core Group, Inc.</a> en Venezuela para conectar a los comerciantes de forma directa con la cripto comunidad, y aumentar el uso de Dash, como método de pago, en sus negocios.</p>
+    </div>
+    <div class="half">
+      <h2>Contacto</h2>
+      <form class="flex flex-col">
+        <input type="text" placeholder="Nombre de la empresa" />
+        <input type="email" placeholder="Correo Electrónico" />
+        <input type="tel" placeholder="Teléfono de Contacto" />
+        <button class="button mt-2">Registrar</button>
+      </form>
+    </div>
+  </div>
+  <div class="custom-container">
+    <div class="half">
+      <a href="https://www.dash.org/es" rel="noopener noreferrer" target="_blank">
+        <img class="w-64 mb-4" src="/logo-dash-alt.png" />
+      </a>
+      <span class="font-bold tracking-wider">All Right Reserved &copy; { year }</span>
+    </div>
+    <div class="half">
+      <h2>Síguenos</h2>
+      <div class="w-24 flex items-center">
+        <a href="https://wa.me/584122960795" rel="noopener noreferrer" target="_blank">
+          <Icon class="w-10 mr-5" name="fa-brands:whatsapp"/>
+        </a>
+        <a href="https://twitter.com/dashpay_espanol" rel="noopener noreferrer" target="_blank">
+          <Icon class="w-11 mr-4" name="fa-brands:twitter" />
+        </a>
+        <a href="https://www.instagram.com/dashpay_espanol/" rel="noopener noreferrer" target="_blank">
+          <Icon class="w-11 mr-5" name="fa-brands:instagram" />
+        </a>
+        <a href="mailto:Support@topdashcity.com" rel="noopener noreferrer" target="_blank">
+          <Icon class="w-12" name="fa-regular:envelope" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+

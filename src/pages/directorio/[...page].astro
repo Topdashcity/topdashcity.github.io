@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '@layouts/Layout.astro'
+import Horizontal from '@components/Horizontal.astro'
+import Card from '@components/Card.astro'
+import Pagination from '@components/Pagination.astro'
+import { cities } from '@utils'
+
+export async function getStaticPaths({ paginate }) {
+  let allMainCommerces = []
+
+  for (const city of cities) {
+    const fromCity = await getCollection(city, ({ data }) => {
+      return data.isMainSubsidiary
+    })
+    allMainCommerces = [...allMainCommerces, ...fromCity]
+  }
+
+  return paginate(allMainCommerces, {
+    pageSize: 8
+  })
+}
+
+const { page } = Astro.props
+---
+
+<Layout>
+  <Horizontal 
+    title={'¡En estos comercios aceptan criptomonedas!'}
+    content={'Consigue aquí los mejores comercios en los que puedes comprar lo que necesites pagando con criptos.'}
+    image={'/banners/banner-cafe.png'}
+    hasCTA={false}
+  />
+  <div class="bg-slate text-center">
+    <h2 class="centered-header">Directorio por ciudad</h2>
+    <div class="container w-full flex justify-around py-6">
+      {
+        cities.map(city => (
+          <a href={`/directorio/${city}`}>
+            <img src={`/directory/${city}.png`} alt="Ciudad" />
+          </a>
+        ))
+      }
+    </div>
+    <h2 class="centered-header">Directorio por comercio</h2>
+    <div class="custom-container">
+      <div class="grid gap-4 grid-cols-4"> 
+        {
+          page.data.map(commerce => (
+            <Card 
+              tag={commerce.data.tag}
+              name={commerce.data.name}
+              address={commerce.data.address}
+              cta={`/directorio/${commerce.data.city}/${commerce.slug}`}
+            />
+          ))
+        }
+      </div>
+    </div>
+    <Pagination 
+      prevUrl={ page.url.prev } 
+      nextUrl={ page.url.next } 
+      currentPage={page.currentPage} 
+    />
+  </div>
+</Layout>

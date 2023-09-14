@@ -1,0 +1,22 @@
+---
+import Layout from '@layouts/Layout.astro'
+import Horizontal from '@components/Horizontal.astro'
+import Banner from '@components/Banner.astro'
+---
+
+<Layout>
+  <Horizontal 
+    title={'¿Quiénes somos?'}
+    content={'Somos una criptomoneda fundada en el año 2014, orientada en su usabilidad como método de pago comercial, ofreciendo liquidación de transacciones en menos de 1 segundo, operaciones irreversibles y costos por comisiones muy bajos. Todo esto con una plataforma tecnológica muy fácil de usar y que se adapta a los requerimientos más exigentes.'}
+    image={'/nosotros.jpg'}
+    hasCTA={false}
+    hasContentRight={true}
+  />
+  <Banner 
+    title={'¿Qué es Top Dash City?'}
+    content={'Top Dash City es un proyecto de Dash Core Group, Inc, liderado por el equipo de Dash en Venezuela, focalizado en el desarrollo de nuevas alianzas y estrategias comunicacionales que permitan conectar a todos los comerciantes del directorio con nuestra comunidad de usuarios en el mundo.'}
+    textColor={'text-white'}
+    image={'/logo-topdash-city-alt.png'}
+    bgColor={'bg-primary'}
+  />
+</Layout>

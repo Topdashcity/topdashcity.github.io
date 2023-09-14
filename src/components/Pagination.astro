@@ -1,0 +1,27 @@
+---
+const { prevUrl, nextUrl, currentPage } = Astro.props
+---
+
+<div class="container pb-8 w-1/3 custom-grid">
+  {
+    prevUrl && (
+      <a 
+        href={ prevUrl } 
+        class="button col-start-1"
+      >
+        &laquo; Anterior
+      </a>
+    )
+  }
+  <div class="mt-4 tabular-nums col-start-2">Página { currentPage }</div>
+  {
+    nextUrl && (
+      <a 
+        href={ nextUrl } 
+        class="button col-start-3"
+      >
+        Siguiente &raquo;
+      </a>
+    )
+  }
+</div>

@@ -1,0 +1,81 @@
+---
+const features = [
+  {
+    image: '/wallets/comision-baja.png',
+    text: '<span class="ml-4">Comisiones de <span class="font-bold">$0.002</span> por transacción.</span>'
+  },
+  {
+    image: '/wallets/rapidez.png',
+    text: '<span class="ml-4">Menos de <span class="font-bold">2 segundos</span>.</span>'
+  },
+  {
+    image: '/wallets/seguridad.png',
+    text: '<span class="ml-4">Transacciones <span class="font-bold">irreversibles</span></span>'
+  }
+]
+const phonelinks = [
+  {
+    class: 'h-[32rem]',
+    image: '/wallets/dash-wallet.png',
+    link: 'https://www.dash.org/downloads/'
+  },
+  {
+    class: 'h-[32rem] pt-16',
+    image: '/wallets/binance.png',
+    link: 'https://www.binance.com/es-MX'
+  },
+  {
+    class: 'h-[32rem] pt-32',
+    image: '/wallets/trust.png',
+    link: 'https://trustwallet.com/es/'
+  },
+  {
+    class: 'h-[32rem]',
+    image: '/wallets/uphold.png',
+    link: 'https://uphold.com/es'
+  },
+  {
+    class: 'h-[32rem] pt-16',
+    image: '/wallets/coinomi.png',
+    link: 'https://www.coinomi.com/en/'
+  },
+  {
+    class: 'h-[32rem] pt-32',
+    image: '/wallets/exodus.png',
+    link: 'https://www.exodus.com/'
+  }
+]
+---
+
+<section class="bg-primary text-white py-8">
+  <div class="custom-container">
+    <div class="half">
+      <h1>Verdadero Dinero Digital</h1>
+      <p>Somos tu mejor opción para compras en automercados, tiendas, restaurantes, y la adquisición de bienes y/o servicios a nivel mundial. Con características únicas y disponible en las mejores billeteras y exchanges del mercado</p>
+      {
+        features.map(feature => (
+          <div class="flex justify-start place-items-center my-4">
+            <img src={feature.image} />
+            <Fragment set:html={feature.text} />
+          </div>
+        ))
+      }
+    </div>
+    <div class="half">
+      <div class="custom-grid">
+        {
+          phonelinks.map(phonelink => (
+            <div class={phonelink.class}>
+              <a 
+                href={phonelink.link} 
+                rel="noopener noreferrer" 
+                target="_blank">
+                <img src={phonelink.image} />
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

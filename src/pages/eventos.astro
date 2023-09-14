@@ -1,0 +1,52 @@
+---
+import Layout from '@layouts/Layout.astro'
+import Horizontal from '@components/Horizontal.astro'
+
+const eventos = [{
+  title: 'DasherPay',
+  content: 'DasherPay, una herramienta creada para ayudar a las empresas en la realización de pagos masivos con Dash a su personal, fue la protagonista en llevar a varios comerciantes de la ciudad de Caracas y Margarita la oportunidad de encaminar, desde cero, a cada uno de sus colaboradores hacia el mundo Cripto.',
+  image: '/events/IMG_0706.png',
+  hasCTA: false
+}, {
+  title: 'Carrera BioMercados 10K',
+  content: 'El pasado 14 de noviembre de 2021, se llevó a cabo la 7.ª edición de la Carrera 10K de BioMercados, y Dash se hizo presente para llevar emoción y cripto-premios a los participantes.',
+  image: '/events/IMG_1916.jpg',
+  hasCTA: false
+}, {
+  title: 'Dash Point Sambil',
+  content: 'Año tras año, los Dash Point se han convertido en una de las actividades más solicitadas por nuestros aliados comerciales. Es que sin dudas, tener donde comprar Dash hasta con PagóMóvil, y aprovechar de comprar productos con descuentos, todo en un solo lugar, es una maravilla.',
+  hasCTA: false
+}]
+---
+
+<Layout>
+  <div class="background">
+    <div class="flex flex-col place-items-center font-bold tracking-wider text-white">
+      <img src="/calendario.png" />
+      <h1 class="uppercase pt-8">Eventos</h1>
+      <p>- Dash en Venezuela -</p>
+    </div>
+  </div>
+  {
+    eventos.map(evento => (
+      <Horizontal 
+        title={evento.title}
+        content={evento.content}
+        image={evento?.image}
+        hasCTA={evento.hasCTA}
+      />
+    ))
+  }
+</Layout>
+
+<style>
+  .background {
+    font-family: 'Montserrat Variant', sans-serif;
+    height: 26rem;
+    padding: 6rem 0;
+    background-image: url('/eventos.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>

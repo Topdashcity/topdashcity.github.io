@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '@layouts/Layout.astro'
+import Horizontal from '@components/Horizontal.astro'
+import Card from '@components/Card.astro'
+import Pagination from '@components/Pagination.astro'
+import { cities } from '@utils'
+
+export async function getStaticPaths({ paginate }) {
+  let allCommerces = []
+  for (const city of cities) {
+    allCommerces = [...allCommerces, ...await getCollection(city)]
+  }
+
+  return cities.flatMap((city) => {
+    const allCommercesFromCity = allCommerces.filter((commerce) => (
+      (commerce.data.city === city) && (commerce.data.isMainSubsidiary)
+    ))
+
+    return paginate(allCommercesFromCity, {
+      params: { city },
+      pageSize: 8
+    })
+  })
+}
+const { page } = Astro.props
+const { city } = Astro.params
+---
+
+<Layout>
+  <Horizontal 
+    title={ `¡Conecta con los mejores comercios de ${city[0].toUpperCase() + city.slice(1)}!` }
+    content={ 'Lista de los mejores comercios de la ciudad' }
+    image={ '/banners/banner-wtf.png' }
+    hasCTA={ true }
+    action={ '/directorio' }
+    actionName={ 'Directorio' }
+  />
+  <div class="bg-slate text-center">
+    <div class="custom-container">
+      <div class="grid gap-4 grid-cols-4">
+        {
+          page.data.map(commerce => (
+            <Card 
+              tag={ commerce.data.tag }
+              name={ commerce.data.name }
+              address={ commerce.data.address }
+              cta={ `/directorio/${city}/${commerce.slug}` }
+            />
+          ))
+        }
+      </div>
+    </div>
+    <Pagination 
+      prevUrl={ page.url.prev } 
+      nextUrl={ page.url.next } 
+      currentPage={ page.currentPage } 
+    />
+  </div>
+</Layout>
