@@ -1,0 +1,44 @@
+---
+import { Icon } from 'astro-icon'
+
+const { social, colorClass } = Astro.props
+---
+
+<div class:list={["w-24 flex items-center", colorClass]}>
+{
+  social.whatsapp &&
+(<a href={ social.whatsapp } rel="noopener noreferrer" target="_blank">
+  <Icon class="w-10 mr-5" name="fa-brands:whatsapp"/>
+</a>)
+}
+{
+  social.telephone &&
+(<a href={ `tel:${social.telephone}` } rel="noopener noreferrer" target="_blank">
+    <Icon class="w-10 mr-5" name="fa-solid:phone-alt"/>
+</a>)
+}
+{
+  social.facebook &&   
+(<a href={ social.facebook } rel="noopener noreferrer" target="_blank">
+  <Icon class="w-11 mr-4" name="fa-brands:facebook-square" />
+</a>)
+}
+{
+  social.twitter &&   
+(<a href={ social.twitter } rel="noopener noreferrer" target="_blank">
+  <Icon class="w-11 mr-4" name="fa-brands:twitter" />
+</a>)
+}
+{
+  social.instagram &&
+(<a href={social.instagram} rel="noopener noreferrer" target="_blank">
+    <Icon class="w-11 mr-5" name="fa-brands:instagram" />
+  </a>)
+}
+{
+  social.email &&
+(<a href={`mailto:${social.email}`} rel="noopener noreferrer" target="_blank">
+  <Icon class="w-12" name="fa-regular:envelope" />
+</a>)
+}
+</div>

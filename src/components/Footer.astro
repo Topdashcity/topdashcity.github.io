@@ -1,6 +1,14 @@
 ---
-import { Icon } from 'astro-icon'
+import Social from '@components/Social.astro'
+
 const year = new Date().getFullYear()
+
+const social = {
+  whatsapp: 'https://wa.me/584122960795',
+  twitter: 'https://twitter.com/dashpay_espanol',
+  instagram: 'https://www.instagram.com/dashpay_espanol/',
+  email: 'Support@topdashcity.com'
+}
 ---
 <div class="w-full bg-accent text-white py-8">
   <div class="custom-container">
@@ -27,20 +35,7 @@ const year = new Date().getFullYear()
     </div>
     <div class="half">
       <h2>Síguenos</h2>
-      <div class="w-24 flex items-center">
-        <a href="https://wa.me/584122960795" rel="noopener noreferrer" target="_blank">
-          <Icon class="w-10 mr-5" name="fa-brands:whatsapp"/>
-        </a>
-        <a href="https://twitter.com/dashpay_espanol" rel="noopener noreferrer" target="_blank">
-          <Icon class="w-11 mr-4" name="fa-brands:twitter" />
-        </a>
-        <a href="https://www.instagram.com/dashpay_espanol/" rel="noopener noreferrer" target="_blank">
-          <Icon class="w-11 mr-5" name="fa-brands:instagram" />
-        </a>
-        <a href="mailto:Support@topdashcity.com" rel="noopener noreferrer" target="_blank">
-          <Icon class="w-12" name="fa-regular:envelope" />
-        </a>
-      </div>
+      <Social social={social} />
     </div>
   </div>
 </div>
