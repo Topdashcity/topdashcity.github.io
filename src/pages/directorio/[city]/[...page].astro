@@ -42,6 +42,7 @@ const { city } = Astro.params
         {
           page.data.map(commerce => (
             <Card 
+              image={ commerce.data.logo }
               tag={ commerce.data.tag }
               name={ commerce.data.name }
               address={ commerce.data.address }

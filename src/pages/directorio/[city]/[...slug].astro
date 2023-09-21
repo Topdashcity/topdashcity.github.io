@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import Layout from '@layouts/Layout.astro'
 import Card from '@components/Card.astro'
+import Social from '@components/Social.astro'
 import { cities } from '@utils'
 
 export async function getStaticPaths() {
@@ -25,17 +26,19 @@ export async function getStaticPaths() {
     })
   }
 }
-const { city, slug } = Astro.params
-const { name, tag, address, map, subsidiaries } = Astro.props
+const { city } = Astro.params
+const { logo, name, tag, address, map, subsidiaries, social } = Astro.props
 ---
 
 <Layout>
   <section class="custom-container">
     <article class="half">
+      <img src={ logo } class="w-48" />
       <h1>{ name }</h1>
       <h2>Categoría: { tag }</h2>
       <p>{ address }</p>
-      <a class="button" href='/directorio'>Directorio</a>
+      <Social social={social} colorClass="text-accent" />
+      <a class="button block mt-8" href='/directorio'>Directorio</a>
     </article>
     <article class="half">
       <iframe src={ map } width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -50,6 +53,7 @@ const { name, tag, address, map, subsidiaries } = Astro.props
           {
             subsidiaries.map((subsidiary) => (
               <Card 
+                image={ subsidiary.data.logo }
                 tag={ subsidiary.data.tag } 
                 name={ subsidiary.data.name } 
                 address={ subsidiary.data.address },
