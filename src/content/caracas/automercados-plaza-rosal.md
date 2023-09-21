@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/automercados-plaza.jpg
 name: Automercados Plaza’s (El Rosal)
 tag: Automercados	
 city: caracas	

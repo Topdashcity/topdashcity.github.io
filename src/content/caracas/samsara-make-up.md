@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/samsara-make-up.jpg
 name: Samsara Make-Up
 tag: Belleza
 city: caracas

@@ -1,4 +1,5 @@
 ---
+logo: /logos/margarita/compras-farmacia.jpg
 name: Comprasfarmacia.com
 tag: Tiendas
 city: margarita

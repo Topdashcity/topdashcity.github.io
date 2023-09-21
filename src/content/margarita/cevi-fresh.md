@@ -1,4 +1,5 @@
 ---
+logo: /logos/margarita/cevi-fresh.jpg
 name: Cevi Fresh
 tag: Gastronomía
 city: margarita

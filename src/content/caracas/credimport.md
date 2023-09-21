@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/credimport.png
 name: Credimport Chuao, c. a.
 tag: Electrónica
 city: caracas

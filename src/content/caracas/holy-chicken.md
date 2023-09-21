@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/holy-chicken.jpg
 name: Holy Chicken (El Hatillo)
 tag: Gastronomía
 city: caracas

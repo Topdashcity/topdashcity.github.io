@@ -1,4 +1,5 @@
 ---
+logo: /logos/margarita/carniceria-viejo-pueblo.jpg
 name: Carnicería Boutique El Viejo Pueblo
 tag: Gastronomía
 city: margarita

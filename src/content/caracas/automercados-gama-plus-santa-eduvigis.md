@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/automercados-gama.png
 name: Automercados Gama Plus (Santa Eduvigis)	
 tag: Automercados
 city: caracas 

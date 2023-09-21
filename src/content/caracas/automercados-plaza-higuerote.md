@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/automercados-plaza.jpg
 name: Automercados Plaza’s (Higuerote)
 tag: Automercados	
 city: caracas	

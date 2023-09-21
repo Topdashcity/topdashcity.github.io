@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/automercados-plaza.jpg
 name: Automercados Plaza’s (El Cafetal)
 tag: Automercados	
 city: caracas	

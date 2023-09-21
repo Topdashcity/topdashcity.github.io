@@ -1,4 +1,5 @@
 ---
+logo: /logos/margarita/chicharroneria-trocaderos.jpg
 name: Chicharronería Trocaderos
 tag: Gastronomía
 city: margarita

@@ -1,4 +1,5 @@
 ---
+logo: /logos/valencia/hato-ejecutivo.jpg
 name: El Hato Ejecutivo
 tag: Automercados
 city: valencia

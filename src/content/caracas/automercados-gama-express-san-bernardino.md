@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/automercados-gama.png
 name: Automercados Gama Express (San Bernardino)	
 tag: Automercados
 city: caracas 

@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/king-foodtruck.jpg
 name: King Food Truck
 tag: Gastronomía
 city: caracas

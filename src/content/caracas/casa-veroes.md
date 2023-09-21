@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/casa-veroes.jpg
 name: Casa Veroes
 tag: Gastronomía
 city: caracas

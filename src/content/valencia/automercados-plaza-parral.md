@@ -1,4 +1,5 @@
 ---
+logo: /logos/valencia/automercados-plaza.jpg
 name: Automercados Plaza’s (El Parral)
 tag: Automercados
 city: valencia

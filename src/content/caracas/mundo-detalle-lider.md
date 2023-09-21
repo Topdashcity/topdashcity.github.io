@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/mundo-detalle.png
 name: El Mundo del Detalle (C.C Líder)
 tag: Tiendas
 city: caracas

@@ -1,4 +1,5 @@
 ---
+logo: /logos/margarita/hotel-margarita-village.jpg
 name: Hotel Margarita Village
 tag: Servicios
 city: margarita

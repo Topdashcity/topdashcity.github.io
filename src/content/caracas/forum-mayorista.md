@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/forum-mayorista.jpg
 name: FORUM Super Mayorista (Guarenas)
 tag: Automercados
 city: caracas

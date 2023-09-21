@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/automercados-plaza.jpg
 name: Automercados Plaza’s (Terrazas del Ávila)
 tag: Automercados	
 city: caracas	

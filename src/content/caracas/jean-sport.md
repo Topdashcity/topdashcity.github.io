@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/jeans-sport.jpg
 name: Jean's Sport
 tag: Tiendas
 city: caracas

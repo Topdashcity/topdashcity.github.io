@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/automercados-gama.png
 name: Automercados Gama Plus (La Trinidad)	
 tag: Automercados
 city: caracas 

@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/panahogar.jpg
 name: Electrodomésticos Panahogar
 tag: Electrónica
 city: caracas

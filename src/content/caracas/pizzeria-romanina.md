@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/pizzeria-romanina.jpg
 name: Pizzería La Romanina
 tag: Gastronomía
 city: caracas

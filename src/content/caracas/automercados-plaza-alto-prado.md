@@ -1,4 +1,5 @@
 ---
+logo: /logos/caracas/automercados-plaza.jpg
 name: Automercados Plaza’s (Plaza Alto Prado)
 tag: Automercados	
 city: caracas	

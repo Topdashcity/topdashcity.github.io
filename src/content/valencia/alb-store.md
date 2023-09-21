@@ -1,4 +1,5 @@
 ---
+logo: /logos/valencia/alb-store.jpg
 name: Alb Store
 tag: Electrónica
 city: valencia

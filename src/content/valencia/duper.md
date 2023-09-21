@@ -1,4 +1,5 @@
 ---
+logo: /logos/valencia/duper.jpg
 name: Duper
 tag: Tiendas
 city: valencia

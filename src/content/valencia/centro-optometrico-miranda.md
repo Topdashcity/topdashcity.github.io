@@ -1,4 +1,5 @@
 ---
+logo: /logos/valencia/centro-optometrico-miranda.jpg
 name: Centro Optométrico Miranda
 tag: Belleza
 city: valencia

@@ -1,4 +1,5 @@
 ---
+logo: /logos/margarita/casa-electricidad.jpg
 name: Casa de la Electricidad C.A.
 tag: Electrónica
 city: margarita
