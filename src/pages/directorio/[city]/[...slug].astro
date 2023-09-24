@@ -6,13 +6,14 @@ import Social from '@components/Social.astro'
 import { cities } from '@utils'
 
 export async function getStaticPaths() {
+  let allCommerces = [], subsidiariesFromCommerce = [], allStaticPaths = []
   for (const city of cities) {
-    const allCommerces = await getCollection(city)
-    const subsidiariesFromCommerce = await getCollection(city, ({ data }) => {
+    allCommerces = await getCollection(city)
+    subsidiariesFromCommerce = await getCollection(city, ({ data }) => {
       return data.subsidiaryFrom
     })
 
-    return allCommerces.map((commerce) => {
+    const staticPathsFromCity = allCommerces.map((commerce) => {
       const subsidiaries = subsidiariesFromCommerce.filter((subsidiary) => (
         (commerce.data.subsidiaryFrom === subsidiary.data.subsidiaryFrom)
         &&
@@ -24,7 +25,11 @@ export async function getStaticPaths() {
         props: { ...commerce.data, subsidiaries }
       }
     })
+
+    allStaticPaths = [...allStaticPaths, ...staticPathsFromCity]
   }
+
+  return allStaticPaths
 }
 const { city } = Astro.params
 const { logo, name, tag, address, map, subsidiaries, social } = Astro.props
