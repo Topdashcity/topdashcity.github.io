@@ -7,4 +7,11 @@ address: 6XJR+J6V, Naguanagua 2005, Carabobo
 map: https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3926.369331812817!2d-68.01075!3d10.2317671!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s772H6XJR%2BJ6V!5e0!3m2!1ses!2sve!4v1693669862280!5m2!1ses!2sve
 isSubsidiary: false
 isMainSubsidiary: true
+social:
+  whatsapp: https://wa.me/584144235216
+  telephone: +582418678921
+  facebook: https://www.facebook.com/ElHatoEjecutivo
+  instagram: https://instagram.com/elhatoejecutivo
+  twitter: https://twitter.com/hato_ejecutivo
+  email: rrhh@elhatoejecutivo.com
 ---

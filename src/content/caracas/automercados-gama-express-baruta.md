@@ -8,4 +8,11 @@ map: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d980.9649473460564!2d-6
 isSubsidiary: true
 isMainSubsidiary: false
 subsidiaryFrom: automercados-gama
+social:
+  whatsapp: https://wa.me/584122314214
+  telephone: +582129445671
+  facebook: https://www.facebook.com/SomosGamaVe
+  instagram: https://instagram.com/somosgamave
+  twitter: https://twitter.com/somosgamave
+  email: tuopinion@excelsiorgama.com
 ---

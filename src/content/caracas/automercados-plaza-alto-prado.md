@@ -8,4 +8,10 @@ map: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7847.490095740431!2d-6
 isSubsidiary: true
 isMainSubsidiary: false
 subsidiaryFrom: automercados-plaza
+social:
+  whatsapp: https://wa.me/584242656632
+  facebook: https://www.facebook.com/elplazas
+  instagram: https://instagram.com/elplazas
+  twitter: https://twitter.com/elplazas
+  email: webplazas@elplazas.com
 ---

@@ -8,4 +8,9 @@ map: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.439466640962!2d-
 isSubsidiary: true
 isMainSubsidiary: true
 subsidiaryFrom: mundo-detalle
+social:
+  whatsapp: https://wa.me/584242637918
+  telephone: +582129766502
+  facebook: https://www.facebook.com/elmundodeldetalle1
+  instagram: https://instagram.com/elmundodeldetalle1
 ---
