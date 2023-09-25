@@ -3,7 +3,9 @@ import { Icon } from 'astro-icon'
 
 const { social, colorClass } = Astro.props
 ---
-
+{
+social &&
+(
 <div class:list={["w-24 flex items-center", colorClass]}>
 {
   social.whatsapp &&
@@ -42,3 +44,4 @@ const { social, colorClass } = Astro.props
 </a>)
 }
 </div>
+)}
