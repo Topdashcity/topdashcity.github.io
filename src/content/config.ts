@@ -18,7 +18,7 @@ const commerceCollection = defineCollection({
       twitter: z.string().optional(),
       instagram: z.string().optional(),
       email: z.string().optional()
-    }).optional()
+    }).optional().nullable()
   })
 })
 
