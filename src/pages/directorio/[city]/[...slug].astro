@@ -33,6 +33,7 @@ export async function getStaticPaths() {
 }
 const { city } = Astro.params
 const { logo, name, tag, address, map, subsidiaries, social } = Astro.props
+
 ---
 
 <Layout>
@@ -43,7 +44,7 @@ const { logo, name, tag, address, map, subsidiaries, social } = Astro.props
       <h2>Categoría: { tag }</h2>
       <p>{ address }</p>
       <Social social={social} colorClass="text-accent" />
-      <a class="button block mt-8" href='/directorio'>Directorio</a>
+      <a class="button rounded-l-lg block mt-8" href='/directorio'>Directorio</a>
     </article>
     <article class="half">
       <iframe src={ map } width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

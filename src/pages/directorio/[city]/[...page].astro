@@ -1,8 +1,8 @@
 ---
 import { getCollection } from 'astro:content'
 import Layout from '@layouts/Layout.astro'
-import Horizontal from '@components/Horizontal.astro'
 import Card from '@components/Card.astro'
+import Horizontal from '@components/Horizontal.astro'
 import Pagination from '@components/Pagination.astro'
 import { cities } from '@utils'
 
@@ -25,6 +25,7 @@ export async function getStaticPaths({ paginate }) {
 }
 const { page } = Astro.props
 const { city } = Astro.params
+
 ---
 
 <Layout>
