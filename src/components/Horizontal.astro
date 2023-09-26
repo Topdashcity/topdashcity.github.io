@@ -6,15 +6,22 @@ const {
   hasCTA = true,
   action = '/',
   actionName = 'Ver más',
+  ctaDirection = 'left', // left, right, full
   hasContentRight = false,
 } = Astro.props
+
+const buttonDirection = {
+  'rounded-l-lg': (ctaDirection === 'left'), 
+  'rounded-r-lg': (ctaDirection === 'right'), 
+  'rounded-lg': (ctaDirection === 'full')
+}
 ---
 
 <div class="custom-container">
   <div class:list={['half', {'order-last': hasContentRight}]}>
     <h2>{title}</h2>
     <p>{content}</p>
-    { hasCTA && (<a class="button" href={action}>{actionName}</a>) }
+    { hasCTA && (<a class:list={['button', buttonDirection]} href={action}>{actionName}</a>) }
   </div>
   <div class="half">
     <img src={image} />
