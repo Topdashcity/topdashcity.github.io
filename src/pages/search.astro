@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from "@layouts/Layout.astro"
+import { cities } from '@utils'
+import SearchEngine from '@components/vue/SearchEngine.vue'
+
+let commerces = []
+
+for (const city of cities) {
+  const commercesFromCity = await getCollection(city)
+  commerces = [...commerces, ...commercesFromCity]
+}
+
+---
+
+<Layout>
+  <section class="py-8">
+    <div class="custom-container flex-col">
+      <h1 class="centered-header">Consigue aquí los mejores comercios:</h1>
+      <SearchEngine client:load searchIndex={commerces} />
+    </div>
+  </section>
+</Layout>
