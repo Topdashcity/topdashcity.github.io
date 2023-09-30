@@ -18,12 +18,12 @@ const buttonDirection = {
 ---
 
 <div class="custom-container">
-  <div class:list={['half', {'order-last': hasContentRight}]}>
+  <div class:list={['mx-4 sm:w-1/2', {'order-last sm:order-last': hasContentRight}]}>
     <h2>{title}</h2>
     <p>{content}</p>
     { hasCTA && (<a class:list={['button', buttonDirection]} href={action}>{actionName}</a>) }
   </div>
-  <div class="half">
-    <img src={image} />
+  <div class="order-first sm:order-last sm:w-1/2">
+    <img class="mx-auto w-9/12 sm:m-0 sm:w-full" src={image} />
   </div>
 </div>

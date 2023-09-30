@@ -6,7 +6,7 @@ const { social, colorClass } = Astro.props
 {
 social &&
 (
-<div class:list={["w-24 flex items-center", colorClass]}>
+<div class:list={["flex items-center", colorClass]}>
 {
   social.whatsapp &&
 (<a href={ social.whatsapp } rel="noopener noreferrer" target="_blank">
@@ -16,7 +16,7 @@ social &&
 {
   social.telephone &&
 (<a href={ `tel:${social.telephone}` } rel="noopener noreferrer" target="_blank">
-    <Icon class="w-10 mr-5" name="fa-solid:phone-alt"/>
+  <Icon class="w-10 mr-5" name="fa-solid:phone-alt"/>
 </a>)
 }
 {
@@ -34,8 +34,8 @@ social &&
 {
   social.instagram &&
 (<a href={social.instagram} rel="noopener noreferrer" target="_blank">
-    <Icon class="w-11 mr-5" name="fa-brands:instagram" />
-  </a>)
+  <Icon class="w-11 mr-5" name="fa-brands:instagram" />
+</a>)
 }
 {
   social.email &&

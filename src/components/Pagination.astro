@@ -2,26 +2,22 @@
 const { prevUrl, nextUrl, currentPage } = Astro.props
 ---
 
-<div class="container pb-8 w-1/3 custom-grid">
+<div class="w-full pb-8 flex justify-around sm:w-1/3 sm:mx-auto">
   {
-    prevUrl && (
-      <a 
-        href={ prevUrl } 
-        class="button rounded-l-lg col-start-1"
-      >
-        &laquo; Anterior
-      </a>
-    )
+    <a 
+      href={ prevUrl } 
+      class:list={["button rounded-l-lg", {'invisible': !prevUrl}]}
+    >
+      &laquo; Anterior
+    </a>
   }
-  <div class="mt-4 tabular-nums col-start-2">Página { currentPage }</div>
-  {
-    nextUrl && (
-      <a 
-        href={ nextUrl } 
-        class="button rounded-r-lg col-start-3"
-      >
-        Siguiente &raquo;
-      </a>
-    )
+  <div class="mt-4 tabular-nums">Página { currentPage }</div>
+  {    
+    <a 
+      href={ nextUrl } 
+      class:list={["button rounded-r-lg", {'invisible': !nextUrl}]}
+    >
+      Siguiente &raquo;
+    </a>
   }
 </div>

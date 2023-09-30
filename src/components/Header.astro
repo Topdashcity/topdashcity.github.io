@@ -1,55 +1,11 @@
 ---
-const features = [
-  {
-    image: '/wallets/comision-baja.png',
-    text: '<span class="ml-4">Comisiones de <span class="font-bold">$0.002</span> por transacción.</span>'
-  },
-  {
-    image: '/wallets/rapidez.png',
-    text: '<span class="ml-4">Menos de <span class="font-bold">2 segundos</span>.</span>'
-  },
-  {
-    image: '/wallets/seguridad.png',
-    text: '<span class="ml-4">Transacciones <span class="font-bold">irreversibles</span></span>'
-  }
-]
-const phonelinks = [
-  {
-    class: 'h-[32rem]',
-    image: '/wallets/dash-wallet.png',
-    link: 'https://www.dash.org/downloads/'
-  },
-  {
-    class: 'h-[32rem] pt-16',
-    image: '/wallets/binance.png',
-    link: 'https://www.binance.com/es-MX'
-  },
-  {
-    class: 'h-[32rem] pt-32',
-    image: '/wallets/trust.png',
-    link: 'https://trustwallet.com/es/'
-  },
-  {
-    class: 'h-[32rem]',
-    image: '/wallets/uphold.png',
-    link: 'https://uphold.com/es'
-  },
-  {
-    class: 'h-[32rem] pt-16',
-    image: '/wallets/coinomi.png',
-    link: 'https://www.coinomi.com/en/'
-  },
-  {
-    class: 'h-[32rem] pt-32',
-    image: '/wallets/exodus.png',
-    link: 'https://www.exodus.com/'
-  }
-]
+import { features, phoneLinks } from "@utils"
+
 ---
 
 <section class="bg-primary text-white py-8">
   <div class="custom-container">
-    <div class="half">
+    <div class="mx-8 sm:w-1/2">
       <h1>Verdadero Dinero Digital</h1>
       <p>Somos tu mejor opción para compras en automercados, tiendas, restaurantes, y la adquisición de bienes y/o servicios a nivel mundial. Con características únicas y disponible en las mejores billeteras y exchanges del mercado</p>
       {
@@ -61,10 +17,10 @@ const phonelinks = [
         ))
       }
     </div>
-    <div class="half">
-      <div class="custom-grid">
+    <div class="mx-8 mt-8 sm:w-1/2">
+      <div class="custom-grid grid-cols-3">
         {
-          phonelinks.map(phonelink => (
+          phoneLinks.map(phonelink => (
             <div class={phonelink.class}>
               <a 
                 href={phonelink.link} 
