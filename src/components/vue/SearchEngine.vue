@@ -41,7 +41,7 @@ const search = () => {
     <h2 class="text-primary text-center">No se ha encontrado su búsqueda.</h2>
     <p class="text-center">Puedes intentar buscando en el <a class="text-primary font-bold" href="/directorio">directorio</a></p>
   </div>
-  <section class="grid gap-4 grid-cols-4" v-else>
+  <section class="container custom-grid sm:grid-cols-4" v-else>
     <Card 
       v-for="commerce in searchResults"
       v-bind="commerce.data"
