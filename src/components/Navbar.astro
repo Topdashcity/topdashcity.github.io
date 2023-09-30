@@ -1,5 +1,7 @@
 ---
-import Menu from '@components/Menu.astro'
+import ResponsiveMenu from '@components/vue/ResponsiveMenu.vue'
+import { menuLinks } from '@utils'
+
 ---
 
 <nav class="w-full border-b divide-slate-700">
@@ -7,6 +9,6 @@ import Menu from '@components/Menu.astro'
     <a href="/">
       <img src="/logo-topdash-city.png" alt="Logo TopDashCity"/>
     </a>
-    <Menu />
+    <ResponsiveMenu client:load menuLinks={menuLinks} />
   </div>
 </nav>
