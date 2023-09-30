@@ -35,6 +35,9 @@ import Footer from '@components/Footer.astro'
 	p {
 		@apply my-6
 	}
+	hr {
+		@apply w-2/3 mx-auto text-primary
+	}
 	input {
 		@apply my-4 p-4 text-black rounded-lg focus:outline-none
 	}
@@ -42,13 +45,10 @@ import Footer from '@components/Footer.astro'
 		@apply w-32 bg-primary text-xs text-white p-4 h-[3rem] text-xs uppercase font-bold tracking-widest disabled:bg-slate disabled:text-accent
 	}
 	.custom-container {
-		@apply container mx-auto flex justify-evenly place-items-center py-8
+		@apply container sm:mx-auto flex flex-col sm:flex-row justify-around sm:justify-evenly place-items-center py-8
 	}
 	.custom-grid {
-		@apply grid gap-2 grid-cols-3 place-items-center
-	}
-	.half {
-		@apply w-1/2 p-4
+		@apply grid grid-cols-[repeat(auto-fill,minmax(1fr,20rem))] gap-2 place-items-center
 	}
 	.centered-header {
 		@apply text-4xl text-primary uppercase font-bold pt-8

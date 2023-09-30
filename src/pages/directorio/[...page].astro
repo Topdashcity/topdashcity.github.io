@@ -33,11 +33,11 @@ const { page } = Astro.props
     hasCTA={true}
     action={"/search"}
     actionName={"Buscar comercios"}
-    ctaDirection={ 'full' }
+    ctaDirection={'full'}
   />
   <div class="bg-slate text-center">
     <h2 class="centered-header">Directorio por ciudad</h2>
-    <div class="container w-full flex justify-around py-6">
+    <div class="container w-full flex flex-col items-center sm:flex-row justify-around py-6">
       {
         cities.map(city => (
           <a href={`/directorio/${city}`}>
@@ -48,7 +48,7 @@ const { page } = Astro.props
     </div>
     <h2 class="centered-header">Directorio por comercio</h2>
     <div class="custom-container">
-      <div class="grid gap-4 grid-cols-4"> 
+      <div class="custom-grid sm:grid-cols-4 grid-rows-2"> 
         {
           page.data.map(commerce => (
             <Card 

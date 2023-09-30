@@ -38,7 +38,7 @@ const { logo, name, tag, address, map, subsidiaries, social } = Astro.props
 
 <Layout>
   <section class="custom-container">
-    <article class="half">
+    <article class="ml-4 sm:w-1/2">
       <img src={ logo } class="w-48 mb-4" />
       <h1>{ name }</h1>
       <h2>Categoría: { tag }</h2>
@@ -46,8 +46,8 @@ const { logo, name, tag, address, map, subsidiaries, social } = Astro.props
       <Social social={social} colorClass="text-accent" />
       <a class="button rounded-l-lg block mt-8" href='/directorio'>Directorio</a>
     </article>
-    <article class="half">
-      <iframe src={ map } width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <article class="iframe-container mt-8">
+      <iframe class="iframe-responsive" src={ map } width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </article>
   </section>
   <section>
@@ -55,15 +55,15 @@ const { logo, name, tag, address, map, subsidiaries, social } = Astro.props
       (subsidiaries.length > 0) && (
         <h2 class="centered-header text-center">También puede que te interesen estas sucursales:</h2>
         <div class="custom-container">
-          <div class="grid gap-4 grid-cols-4">
+          <div class="custom-grid sm:grid-cols-4">
           {
             subsidiaries.map((subsidiary) => (
               <Card 
-                image={ subsidiary.data.logo }
-                tag={ subsidiary.data.tag } 
-                name={ subsidiary.data.name } 
-                address={ subsidiary.data.address },
-                cta={ `/directorio/${city}/${subsidiary.slug}` }
+                image={subsidiary.data.logo}
+                tag={subsidiary.data.tag} 
+                name={subsidiary.data.name} 
+                address={subsidiary.data.address},
+                cta={`/directorio/${city}/${subsidiary.slug}`}
               />
             ))
           }
@@ -73,3 +73,12 @@ const { logo, name, tag, address, map, subsidiaries, social } = Astro.props
     }
   </section>
 </Layout>
+
+<style>
+.iframe-container {
+  @apply relative overflow-hidden w-full pt-[56.25%] sm:pt-[35%] sm:w-1/2
+}
+.iframe-responsive {
+  @apply absolute top-0 bottom-0 left-0 right-0 w-full h-full
+}
+</style>
