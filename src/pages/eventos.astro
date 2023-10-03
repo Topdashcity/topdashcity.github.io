@@ -15,14 +15,12 @@ import { eventos } from '@utils'
   </div>
   {
     eventos.map(evento => (
-      <>
       <Horizontal 
         title={evento.title}
         content={evento.content}
         image={evento?.image}
         hasCTA={evento.hasCTA}
-      /><hr />
-      </>
+      />
     ))
   }
 </Layout>
